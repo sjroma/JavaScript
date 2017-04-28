@@ -1,0 +1,4 @@
+# JavaScript notes
+* **console.log** - Almost every language has a simple way to "print" text, and the simplest way in JS is a function known as console.log. While it's part of a more complex tool called **console**, we'll use it only for printing text.
+* **;** - You'll see most lines of JS end with a semicolon which helps the language determine where one statement ends and another begins.  Semicolons can be a deep topic of discussion but we'll keep things simple: end every line with a semicolon, unless specifically told not to.  Semicolons aren't always necessary, but they're a good habit of people new to JS, so they're used in this tutorial.
+* **//** - Like most languages, JS allows you to add notes to your code, also known as comments. We'll use the double slashes in the examples.  Anything after the double slashes on that same line will be ignore by the browser. 
