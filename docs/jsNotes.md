@@ -9,15 +9,16 @@
   * be reserved works like "**return**", "**if**", "**else**", "**for**", etc. 
   
 * Variable names can
-  * contain the special characters "**$**" and "**_**"
-  * can contain upper and lowercase letters \(note that they are case sensitive meaning **var Car** is different than **var car**\)
+  * contain the special characters "$" and "_"
+  * can contain upper and lowercase letters (note that they are case sensitive meaning **var Car** is different than **var car**)
   * include digits, except as the first character
  
 ###Primitive Data Types
 * JavaScript supports many types of data and each has its own unique meaning and syntax.  *Primitive data types* are those that are fundamental to storing the simplest data, like numbers and letters.  The following table shows some of the primitive data types available in the JavaScript language.
+
 | Type | Syntax |
 | ---  |   ---  |
-| Number | 1, 200, 3.14159 |
-| String | "hello there!", 'hello there!' |
+| Number | 1, 200, 3\.14159 |
+| String | "hello there\!", 'hello there\!' |
 | Boolean | true , false |
 | Undefined | undefined | 
