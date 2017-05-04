@@ -7,5 +7,5 @@
    * Java creates applications that run in a virtual machine or browser while JavaScript code is run on a browser only.
    * Java code needs to be compiled while JavaScript code are all in text.
    * They require different plug-ins.
-* For additional information about JavaScript, visit [Mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript)
+* For additional information about JavaScript, visit [Mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript)   
 <sup>All key points above were plagiarized from [https://www.java.com/en/download/faq/java_javascript.xml](https://www.java.com/en/download/faq/java_javascript.xml)<sup>
