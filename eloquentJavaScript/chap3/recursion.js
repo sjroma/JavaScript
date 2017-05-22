@@ -11,7 +11,8 @@ function isEven(N) {
     return true;
   else if (N == 1)
     return false;
-  else isEven(N - 2);
+  else
+    return isEven(N - 2);
 }
 
-console.log(isEven(1));
+console.log(isEven(21));
