@@ -1,126 +1,114 @@
 /*Start by making some yellow stickies*/
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-  font-family:arial,sans-serif;
-  font-size:100%;
-  margin:3em;
-  background:#666;
-  color:#fff;
+body {
+  background: #666;
+  color: #fff;
+  font-family: arial, sans-serif;
+  font-size: 100%;
+  margin: 3em;
 }
 
-h2,p{
-  font-size:100%;
-  font-weight:normal;
+h2, p {
+  font-size: 100%;
+  font-weight: normal;
 }
 
-ul,li{
-  list-style:none;
+ul, li {
+  list-style: none; /*remove bullet from the list item*/
 }
 
-ul{
-  overflow:hidden;
-  padding:3em;
+ul {
+  overflow: hidden; /*clip and hide any overflow*/
+  padding: 3em;
 }
 
 /*Use box-shadow to make the notes stand out*/
-ul li a{
-  text-decoration:none;
-  color:#000;
-  background:#ffc;
-  display:block;
-  height:10em;
-  width:10em;
-  padding:1em;
-  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1); /*Firefox*/
-  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7); /*Safari & Chrome*/
+/*Smooth the transition when a sticky is hovered. Makes it so the transition is not sudden but rather gradually, over a quarter of a second*/
+ul li a {
+  background: #ffc; /*light yellow*/
+  color: #000;
+  display: block;
+  height: 17em; /*size the sticky*/
+  width: 17em;  /*size the sticky*/
+  padding: 1em;
+  text-decoration: none; /*remove bullet from the list item*/
   box-shadow: 5px 5px 7px rgba(33,33,33,.7); /*Opera*/
-  -moz-transition:-moz-transform .15s linear;
-  -o-transition:-o-transform .15s linear;
-  -webkit-transition:-webkit-transform .15s linear;
-  
+  -o-transition: -o-transform .15s linear; /*linear meaning same speed from start to end*/
+  -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1); /*Firefox*/
+  -moz-transition: -moz-transform .15s linear;
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7); /*Safari & Chrome*/
+  -webkit-transition: -webkit-transform .15s linear;
 }
-ul li{
-  margin:1em;
-  float:left;
+
+ul li {
+  float: left;
+  margin: 1em;
 }
 
 /*Add a cool font for the text on the stickies, font needs to be big to be readable*/
-ul li h2{
-  font-size:140%;
-  font-weight:bold;
-  padding-bottom:10px;
+ul li h4 {
+  font-size: 140%;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
 
-ul li p{
-  font-family:"Reenie Beanie",arial,sans-serif;
-  font-size:180%;
+ul li p {
+  font-family: "Reenie Beanie", arial, sans-serif;
+  font-size: 180%;
 }
 
-/*Tilt the stickies because it looks cool*/
-ul li a{
-  -webkit-transform:rotate(-6deg);
-  -o-transform:rotate(-6deg);
-  -moz-transform:rotate(-6deg);
+/*Tilt all the stickies to the left because it looks cool*/
+ul li a {
+  -o-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
 }
 
-/*Make the stickies look randomly tilted...otherwise they tilt uniform*/
-/*Make every second sticky green and every third, light blue*/
-ul li:nth-child(even) a{
-  -o-transform:rotate(4deg);
-  -webkit-transform:rotate(4deg);
-  -moz-transform:rotate(4deg);
-  position:relative;
-  top:5px;
-  background:#cfc;
+/*Make the stickies look randomly tilted, otherwise they tilt uniformly*/
+/*Tilt every even sticky to the right
+/*Make every second sticky a lightgreen*/
+ul li:nth-child(even) a {
+  background: #cfc; /*very lightgreen*/
+  -o-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  position: relative;
+  top: 5px;
 }
 
-ul li:nth-child(3n) a{
-  -o-transform:rotate(-3deg);
-  -webkit-transform:rotate(-3deg);
-  -moz-transform:rotate(-3deg);
-  position:relative;
-  top:-5px;
-  background:#ccf;
+/*Tilt every third sticky to the left*/
+/*Make every third sticky a lightblue*/
+ul li:nth-child(3n) a {
+  background: #ccf; /*lightblue-ish*/
+  -o-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  position: relative;
+  top: -5px;
 }
 
-ul li:nth-child(5n) a{
-  -o-transform:rotate(5deg);
-  -webkit-transform:rotate(5deg);
-  -moz-transform:rotate(5deg);
-  position:relative;
-  top:-10px;
+/*Complete the randomness by tilting every fifth sticky*/
+ul li:nth-child(5n) a {
+  -o-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  position: relative;
+  top: -10px;
 }
 
 /*Zoom in when an individual sticky is hovered (larger drop-shadow and scale transform again*/
 /*The higher z-index makes the hovered sticky cover the others*/
-ul li a:hover, ul li a:focus{
-  box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
-  -webkit-transform: scale(1.25);
-  -moz-transform: scale(1.25);
+ul li a:hover, ul li a:focus {
+  box-shadow: 10px 10px 7px rgba(0,0,0,.7); /*Opera*/
   -o-transform: scale(1.25);
-  position:relative;
-  z-index:5;
-}
-
-/*Smooths the transition when a sticky is hovered. Makes it so the transition is sudden but rather gradually, over a quarter of a second*/
-ul li a{
-  text-decoration:none;
-  color:#000;
-  background:#ffc;
-  display:block;
-  height:10em;
-  width:10em;
-  padding:1em;
-  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
-  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  -moz-transition:-moz-transform .15s linear;
-  -o-transition:-o-transform .15s linear;
-  -webkit-transition:-webkit-transform .15s linear;
+  -moz-box-shadow: 10px 10px 7px rgba(0,0,0,.7); /*Firefox*/
+  -moz-transform: scale(1.25);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7); /*Safari & Chrome*/
+  -webkit-transform: scale(1.25);
+  position: relative;
+  z-index: 5;
 }
