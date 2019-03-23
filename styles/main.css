@@ -5,77 +5,71 @@
 }
 
 body {
-  background: #666;
+  background: #665;
   color: #fff;
-  font-family: arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 100%;
   margin: 3em;
 }
 
-h2, p {
-  font-size: 100%;
-  font-weight: normal;
+#title {
+  text-align: center;
 }
 
-ul, li {
+.stickies {
   list-style: none; /*remove bullet from the list item*/
-}
-
-ul {
   overflow: hidden; /*clip and hide any overflow*/
   padding: 3em;
 }
 
+.sticky-note {
+  float: left;
+  margin: 1em;
+}
+
 /*Use box-shadow to make the notes stand out*/
-/*Smooth the transition when a sticky is hovered. Makes it so the transition is not sudden but rather gradually, over a quarter of a second*/
-ul li a {
+/*Smooth the transition when a sticky is hovered. Make it so the transition is not sudden but rather gradually, over a quarter of a second*/
+.sticky-note_anchor {
   background: #ffc; /*light yellow*/
+  box-shadow: 5px 5px 7px rgba(33,33,33,0.7);
   color: #000;
   display: block;
   height: 17em; /*size the sticky*/
   width: 17em;  /*size the sticky*/
   padding: 1em;
-  text-decoration: none; /*remove bullet from the list item*/
-  box-shadow: 5px 5px 7px rgba(33,33,33,.7); /*Opera*/
-  -o-transition: -o-transform .15s linear; /*linear meaning same speed from start to end*/
-  -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1); /*Firefox*/
-  -moz-transition: -moz-transform .15s linear;
-  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7); /*Safari & Chrome*/
-  -webkit-transition: -webkit-transform .15s linear;
+  text-decoration: none; /*remove underline from the list item*/
+  transition: transform .15s linear; /*linear meaning same speed from start to end*/
 }
 
-ul li {
-  float: left;
-  margin: 1em;
+/*Zoom in when an individual sticky is hovered (larger drop-shadow and scale transform again*/
+/*The higher z-index makes the hovered sticky cover the others*/
+.sticky-note_anchor:hover, .sticky-note_anchor:focus {
+  box-shadow: 10px 10px 7px rgba(0,0,0,0.7);
+  position: relative;
+  transform: scale(1.25);
+  z-index: 5;
 }
 
-/*Add a cool font for the text on the stickies, font needs to be big to be readable*/
-ul li h4 {
-  font-size: 140%;
-  font-weight: bold;
+.sticky-note_title {
   padding-bottom: 10px;
 }
 
-ul li p {
-  font-family: "Reenie Beanie", arial, sans-serif;
+.sticky-note_text {
+  font-family: 'Indie Flower', cursive, 'Arial', sans-serif;
   font-size: 180%;
 }
 
 /*Tilt all the stickies to the left because it looks cool*/
-ul li a {
-  -o-transform: rotate(-6deg);
-  -moz-transform: rotate(-6deg);
-  -webkit-transform: rotate(-6deg);
+.sticky-note_anchor {
+  transform: rotate(-6deg);
 }
 
 /*Make the stickies look randomly tilted, otherwise they tilt uniformly*/
-/*Tilt every even sticky to the right
-/*Make every second sticky a lightgreen*/
+/*Tilt every even sticky to the right*/
+/*Make every second sticky lightgreen*/
 ul li:nth-child(even) a {
   background: #cfc; /*very lightgreen*/
-  -o-transform: rotate(4deg);
-  -moz-transform: rotate(4deg);
-  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
   position: relative;
   top: 5px;
 }
@@ -84,31 +78,22 @@ ul li:nth-child(even) a {
 /*Make every third sticky a lightblue*/
 ul li:nth-child(3n) a {
   background: #ccf; /*lightblue-ish*/
-  -o-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
   position: relative;
   top: -5px;
 }
 
 /*Complete the randomness by tilting every fifth sticky*/
 ul li:nth-child(5n) a {
-  -o-transform: rotate(5deg);
-  -moz-transform: rotate(5deg);
-  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
   position: relative;
   top: -10px;
 }
 
-/*Zoom in when an individual sticky is hovered (larger drop-shadow and scale transform again*/
-/*The higher z-index makes the hovered sticky cover the others*/
-ul li a:hover, ul li a:focus {
-  box-shadow: 10px 10px 7px rgba(0,0,0,.7); /*Opera*/
-  -o-transform: scale(1.25);
-  -moz-box-shadow: 10px 10px 7px rgba(0,0,0,.7); /*Firefox*/
-  -moz-transform: scale(1.25);
-  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7); /*Safari & Chrome*/
-  -webkit-transform: scale(1.25);
-  position: relative;
-  z-index: 5;
+footer {
+  text-align: center;
+}
+
+.citation {
+  font-size: small;
 }
