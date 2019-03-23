@@ -3,77 +3,71 @@
 
 <head>
   <meta charset="utf-8">
-  <title>JavaScript Notes</title>
+  <title>JavaScript Sticky Notes</title>
   <style>
   </style>
   <link rel="stylesheet" href="styles/main.css">
-  <link href="http://fonts.googleapis.com/css?
-family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 </head>
 
 <body>
-  <h1><center>JavaScript Notes</center></h1>
-  <ul>
-    <li>
-      <a href="#">
-        <h4>console.log</h4>
-        <p>The simplest way in JavaScript for printing text</p>
+  <h1 id="title">JavaScript Sticky Notes</h1>
+  <ul class="stickies">
+    <li class="sticky-note">
+      <a class="sticky-note_anchor" href="#">
+        <h2 class="sticky-note_title">console.log</h2>
+        <p class="sticky-note_text">The simplest way in JavaScript for printing text</p>
       </a>
     </li>
-    <li>
-      <a href="#">
-        <h4>Comment your code</h4>
-        <p>Anything after double slashes on that same line will be ignored by the browser</p>
+    <li class="sticky-note">
+      <a class="sticky-note_anchor" href="#">
+        <h2 class="sticky-note_title">Comment your code</h2>
+        <p class="sticky-note_text">Anything after double slashes on that same line will be ignored by the browser<br>For example;<br> //This is a comment</p>
       </a>
     </li>
-    <li>
-      <a href="#">
-        <h4>Variable names can't;</h4>
-        <p>- Start with a number<br>- Include spaces or hyphens</p>
+    <li class="sticky-note">
+      <a class="sticky-note_anchor" href="#">
+        <h2 class="sticky-note_title">Variable names can't;</h2>
+        <p class="sticky-note_text">- Start with a number<br>- Include spaces or hyphens<br>- Be reserved words like "return", "if", "else", "for", etc.</p>
       </a>
     </li>
-    <li>
-      <a href="#">
-        <h4>Variable names can't;</h4>
-        <p>Be reserved words like "return", "if", "else", "for", etc.</p>
+    <li class="sticky-note">
+      <a class="sticky-note_anchor" href="#">
+        <h2 class="sticky-note_title">Variable names can;</h2>
+        <p class="sticky-note_text">- Contain the special characters "$" and "_"<br>- Include digits, except as the first character</p>
       </a>
     </li>
-    <li>
-      <a href="#">
-        <h4>Variable names can;</h4>
-        <p>- Contain the special characters "$" and "_"<br>- Include digits, except as the first character</p>
+    <li class="sticky-note">
+      <a class="sticky-note_anchor" href="#">
+        <h2 class="sticky-note_title">Variable names can;</h2>
+        <p class="sticky-note_text">Contain upper &amp; lowercase letters (Note: they are case sensitive...which means <b>var Car</b> is different than <b>var car</b>)</p>
       </a>
     </li>
-    <li>
-      <a href="#">
-        <h4>Variable names can;</h4>
-        <p>Contain upper &amp; lowercase letters (Note: they are case sensitive...meaning <b>var Car</b> is different than <b>var car</b>)</p>
+    <li class="sticky-note">
+      <a class="sticky-note_anchor" href="#">
+        <h2 class="sticky-note_title">Open the console</h2>
+        <p class="sticky-note_text"><strong>Command+Option+I</strong> (Mac)<br><strong>Control+Shift+I</strong> (Windows, Linux)</p>
       </a>
     </li>
-    <li>
-      <a href="#">
-        <h4>Open the console</h4>
-        <p>Command+Option+I (Mac)<br> Control+Shift+I (Windows, Linux)</p>
+    <li class="sticky-note">
+      <a class="sticky-note_anchor" href="#">
+        <h2 class="sticky-note_title">Running scripts</h2>
+        <p class="sticky-note_text">Edit this file with the JS script you want to run</p>
       </a>
     </li>
-    <li>
-      <a href="#">
-        <h4>Running scripts</h4>
-        <p>Edit this file with the JS script you want to run</p>
+    <li class="sticky-note">
+      <a class="sticky-note_anchor" href="#">
+        <h2 class="sticky-note_title">title</h2>
+        <p class="sticky-note_text">text</p>
       </a>
     </li>
-<!--
-    <li>
-      <a href="#">
-        <h4>title</h4>
-        <p>text</p>
-      </a>
-    </li>
--->
   </ul>
-  <p><small>Design idea from <a href="https://code.tutsplus.com/tutorials/create-a-sticky-note-effect-in-5-easy-steps-with-css3-and-html5--net-13934" target="_blank">Create a Sticky Note effect in 5 steps with CSS3 and HTML5</a></small></p>
-  
-  <script src="scripts/nameScript.js"></script>
+
+  <footer>
+    <p class="citation">Design idea from <a href="https://code.tutsplus.com/tutorials/create-a-sticky-note-effect-in-5-easy-steps-with-css3-and-html5--net-13934" target="_blank">Create a Sticky Note effect in 5 steps with CSS3 and HTML5</a></p>
+  </footer>
+
+  <script src="scripts/squaredSum.js"></script>
 </body>
 
 </html>
