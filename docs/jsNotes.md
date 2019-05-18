@@ -3,12 +3,12 @@
 * **;** - You'll see most lines of JS end with a semicolon which helps the language determine where one statement ends and another begins.  Semicolons can be a deep topic of discussion but we'll keep things simple: end every line with a semicolon, unless specifically told not to.  Semicolons aren't always necessary, but they're a good habit of people new to JS, so they're used in this tutorial.
 * **//** - Like most languages, JS allows you to add notes to your code, also known as comments. We'll use the double slashes in the examples.  Anything after the double slashes on that same line will be ignored by the browser. 
 
-* Variable names can't
-  * start with a number
-  * include spaces or hyphens
+* Variable names cannot; 
+  * start with a number  
+  * include spaces or hyphens  
   * be reserved words like "**return**", "**if**", "**else**", "**for**", etc. 
   
-* Variable names can
+* Variable names can;  
   * contain the special characters "$" and "_"
   * contain upper and lowercase letters (note that they are case sensitive meaning **var Car** is different than **var car**)
   * include digits, except as the first character
