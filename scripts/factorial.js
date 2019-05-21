@@ -16,9 +16,7 @@ function factorialize(num) {
   return answer = num * factorialize(num - 1);
 }
 
-//console.log("Num factorial is...",answer);
-
-//console.log(factorialize(5)); //should return 120
-console.log(factorialize(10)); //should return 3628800
-//console.log(factorialize(20)); //should return 2432902008176640000
-//console.log(factorialize(0)); //should return 1
+//console.log("5! =",factorialize(5)); //should return 120
+console.log("10! =",factorialize(10)); //should return 3628800
+//console.log("20! =",factorialize(20)); //should return 2432902008176640000
+//console.log("0! =",factorialize(0)); //should return 1
